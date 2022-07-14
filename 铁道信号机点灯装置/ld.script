@@ -1,0 +1,83 @@
+
+/*
+OUTPUT_FORMAT("elf32-tradlittlemips", "elf32-tradlittlemips", "elf32-tradlittlemips")
+ */
+ 
+OUTPUT_ARCH(mips)
+
+ENTRY(start)
+
+SECTIONS
+{
+    . = 0xbfc00000; 
+    . = ALIGN(4);
+    .text :
+    {
+        *(.text)
+    }
+
+    . = ALIGN(4);
+    .rel.text :
+    {
+        *(.rel.text)
+    }
+
+    . = ALIGN(4);
+    .reginfo :
+    {
+        *(.reginfo)
+    }
+
+    . = ALIGN(4);
+    .ptr :
+    {
+        *(.ptr)
+    }
+
+    . = ALIGN(4);
+    .shstrtab :
+    {
+        *(.shstrtab)
+    }
+
+    . = ALIGN(4);
+    .strtab :
+    {
+        *(.strtab)
+    }
+    __text_end = .;
+    
+    . = ALIGN(4);
+    __data_start = .;   /* DATA */
+    .rodata :
+    {
+        *(.rodata)
+    }
+
+    . = ALIGN(4);
+    .data :
+    {
+        *(.data)
+    }
+    _gp = ABSOLUTE(.);  /* TODO */
+    __data_end = .;
+        
+    . = ALIGN(4);
+    . = _RAM_BSS;
+    __bss_start = .;    /* BSS */
+    .sbss :
+    {
+        *(.sbss)
+    }
+    
+    .bss :
+    {
+        *(.bss) . = ALIGN(4);
+    }
+    
+    .scommon :
+    {
+        *(.scommon)
+    }
+    __bss_end = .;
+}
