@@ -1,0 +1,11 @@
+Hello.obj
+user.obj
+cvi.lib
+cvistart.lib
+kernel32.lib
+paho-mqtt3a.lib
+tencentcloud.lib
+user32.lib
+EXE Symbol Module
+Exports Module
+Resource Module

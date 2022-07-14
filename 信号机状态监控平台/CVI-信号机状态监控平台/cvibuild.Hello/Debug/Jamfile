@@ -1,0 +1,51 @@
+CCFLAGS = -g ;
+HDRS = 	"d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\paho-mqtt3a"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "Hello.c" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2" ;
+LOCATE on "Hello.h" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2" ;
+LOCATE on "user.c" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2" ;
+LOCATE on "user.h" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2" ;
+Object "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\Hello.c" ;
+FILENUM on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj" = 1 ;
+DEFPROTS on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj.cvidefprots" ;
+OUTFILE on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj.out" ;
+PrjObjects += "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.obj" ;
+Object "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\user.c" ;
+FILENUM on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj" = 2 ;
+DEFPROTS on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj.cvidefprots" ;
+OUTFILE on "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj" = "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj.out" ;
+PrjObjects += "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\user.obj" ;
+Object "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\resources.res" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\resources.in.rc" ;
+Depends "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\resources.res" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\manifest.xml" ;
+MainFromObjects "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.exe" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\link_options.txt" ;
+Depends "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.exe" : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\resources.res" ;
+Depends all : "d:\\桌面\\mqtt\\1\\7-2mqtt - 改2\\cvibuild.Hello\\Debug\\Hello.exe" ;
